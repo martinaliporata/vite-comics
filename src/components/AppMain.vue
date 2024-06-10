@@ -143,51 +143,57 @@
 <template>
     <main>
         <section class="main-div">
-            <p>
+            <h1>
                 <-- Contents goes here -->
-            </p>
+            </h1>
         </section>
-        <section class="navbar">
-            <h5>
-                dc comics
-            </h5>
-            <nav>
-                <ul>
-                    <li v-for="element in navbarDcComics" :key="index">
-                        {{ element.name }}
-                    </li>
-                </ul>
-            </nav>
-            <h5>
-                shop
-            </h5>
-            <nav>
-                <ul>
-                    <li v-for="element in navbarShop" :key="index">
-                        {{ element.name }}
-                    </li>
-                </ul>
-            </nav>
-            <h5>
-                dc
-            </h5>
-            <nav>    
-                <ul>
-                    <li v-for="element in navbarDc" :key="index">
-                        {{ element.name }}
-                    </li>
-                </ul>
-            </nav>
-            <h5>
-                sites
-            </h5>
-            <nav>    
-                <ul>
-                    <li v-for="element in navbarSites" :key="index">
-                        {{ element.name }}
-                    </li>
-                </ul>
-            </nav>
+        <section class="navbar-main">
+            <section class="navbar-left">
+                <h2>
+                    dc comics
+                </h2>
+                <nav>
+                    <ul>
+                        <li v-for="element in navbarDcComics" :key="index">
+                            {{ element.name }}
+                        </li>
+                    </ul>
+                </nav>
+                <h2>
+                    shop
+                </h2>
+                <nav>
+                    <ul>
+                        <li v-for="element in navbarShop" :key="index">
+                            {{ element.name }}
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="navbar-middle">
+                <h2>
+                    dc
+                </h2>
+                <nav>    
+                    <ul>
+                        <li v-for="element in navbarDc" :key="index">
+                            {{ element.name }}
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="navbar-right">
+                <h2>
+                    sites
+                </h2>
+                <nav>    
+                    <ul>
+                        <li v-for="element in navbarSites" :key="index">
+                            {{ element.name }}
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </section>
     </main>
 </template>
@@ -200,19 +206,37 @@
         background-image: url(../assets/img/footer-bg.jpg);
         background-position: center;
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
+        margin: 0 auto;
     }
 
-    h5 {
-        text-transform: uppercase;
+    h2 {
+        @include text-uppercase;
     }
 
     .main-div {
-        height: 25vh;
+        height: 15vh;
         background-color: #1c1c1c;
+        @include flex-row;
     }
 
-    p,h5 {
+    h1,h2 {
         color: $color-white;
     }
+
+    li {
+        color: $color-grey;
+    }
+
+    .navbar-main {
+        @include flex-row;
+        align-items: baseline;
+    }
+
+    .navbar-left,
+    .navbar-middle,
+    .navbar-right {
+        padding-left: 1rem;
+    }
+
 </style>

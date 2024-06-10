@@ -86,13 +86,14 @@
 
     header{
       width: 100vw;
-      height: 25vh;
-      @include flex;
+      height: 15vh;
+      @include flex-row;
+      @include text-uppercase;
     }
 
     .logo{
       width: 50%;
-      @include flex;
+      @include flex-row;
       justify-content: center;
     }
 
@@ -101,7 +102,7 @@
     }
 
     ul {
-      @include flex;
+      @include flex-row;
     }
 
     li {
