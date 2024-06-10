@@ -17,6 +17,6 @@
   <AppFooter/>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+  @use './style/general.scss'
 </style>
