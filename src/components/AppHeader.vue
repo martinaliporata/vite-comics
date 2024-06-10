@@ -60,10 +60,11 @@
 </script>
 
 <template>
+  <header>
     <section class="logo">
       <img src="../assets/img/dc-logo.png" alt="">
     </section>
-    <section>
+    <section class="navbar">
       <nav>
         <ul>
           <li v-for="element in navbarHeader" :key="index">
@@ -72,9 +73,38 @@
         </ul>
       </nav>
     </section>
+  </header>
 </template>
 
 <style lang="scss" scoped>
     @use '../style/partials/variables' as *;
     @use '../style/partials/mixins' as *;
+    
+    img {
+      width: 10%;
+    }
+
+    header{
+      width: 100vw;
+      height: 25vh;
+      @include flex;
+    }
+
+    .logo{
+      width: 50%;
+      @include flex;
+      justify-content: center;
+    }
+
+    .navbar{
+      width: 50%;
+    }
+
+    ul {
+      @include flex;
+    }
+
+    li {
+      padding-right: 1rem;
+    }
 </style>
