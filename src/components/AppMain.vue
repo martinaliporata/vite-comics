@@ -1,4 +1,5 @@
 <script>
+    import ListCards from './ListCards.vue'
     export default {
         data() {
             return {
@@ -136,6 +137,9 @@
                     }
                 ]
             }
+        },
+        components : {
+            ListCards
         }
     }
 </script>
@@ -195,6 +199,7 @@
                 </nav>
             </section>
         </section>
+        <ListCards/>
     </main>
 </template>
 

@@ -5,9 +5,7 @@
                 navbarShop: [
                     {
                         name: 'Facebook',
-                        img: url(./assets/img/footer-facebook.png)
-                        link: '#',
-                        active: false,
+                        image:'../assets/img/footer-facebook.jpg'
                     },
                     {
                         name: 'Twitter',
@@ -31,6 +29,11 @@
                     },
                 ]
             }
+        },
+        methods: {
+            getImagePath: function(img) {
+                return new URL(`../assets/${img}`, import.meta.url).href;
+            }
         }
     }
 </script>
@@ -46,13 +49,9 @@
             <h2>
                 follow us
             </h2>
-            <nav>
-            <ul>
-                <li v-for="element in navbarFooter" :key="index">
-                {{ element.img }}
-                </li>
-            </ul>
-            </nav>
+            <div>
+                <img :src="getImagePath(imageName)" alt="">
+            </div>
         </section>
     </header>
 </template>
@@ -64,6 +63,7 @@
     footer {
         height: 15vh;
         @include text-uppercase;
+        background-color: #303030;
     }
 
     button,
