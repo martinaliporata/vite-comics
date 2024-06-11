@@ -91,7 +91,9 @@
             Current series
         </h1>
         <div class="cards">
-            <SingleCard v-for="(card, index) in cardList" :key="index" :singleCard="card"/>
+            <article class="card">
+                <SingleCard v-for="(card, index) in cardList" :key="index" :singleCard="card"/>
+            </article>
         </div>
     </section>
 </template>
