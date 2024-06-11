@@ -102,7 +102,4 @@
     @use '../style/partials/variables' as *;
     @use '../style/partials/mixins' as *;
 
-    h1 {
-        @include text-uppercase;
-    }
 </style>

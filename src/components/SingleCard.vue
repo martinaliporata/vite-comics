@@ -1,5 +1,4 @@
 <script>
-    import SingleCard from './SingleCard.vue'
     export default {
         data() {
             return {
@@ -18,7 +17,7 @@
 <template>
     <section class="cards-list">
         <article>
-            <img src="card.thumb" alt="card.series">
+            <img :src="card.thumb" alt="card.series">
             <h4>
                 {{ card.series }}
             </h4>
@@ -30,7 +29,4 @@
     @use '../style/partials/variables' as *;
     @use '../style/partials/mixins' as *;
 
-    h1 {
-        @include text-uppercase;
-    }
 </style>
