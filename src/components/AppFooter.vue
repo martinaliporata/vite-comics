@@ -2,7 +2,7 @@
     export default {
         data() {
             return {
-                navbarShop: [
+                navbarSocial: [
                     {
                         name: 'Facebook',
                         image:'../assets/img/footer-facebook.jpg'
@@ -29,11 +29,6 @@
                     },
                 ]
             }
-        },
-        methods: {
-            getImagePath: function(img) {
-                return new URL(`../assets/${img}`, import.meta.url).href;
-            }
         }
     }
 </script>
@@ -50,7 +45,7 @@
                 follow us
             </h2>
             <div>
-                <img :src="getImagePath(imageName)" alt="">
+                <img src="../assets/img/footer-periscope.png" alt="">
             </div>
         </section>
     </header>

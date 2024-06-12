@@ -28,5 +28,14 @@
 <style lang="scss" scoped>
     @use '../style/partials/variables' as *;
     @use '../style/partials/mixins' as *;
+    
+    article {
+            width: calc(100% / 6);
+            padding: 1rem;
+            margin-bottom: .5rem;
 
+            img{
+                width: 100%;
+            }
+        }
 </style>
