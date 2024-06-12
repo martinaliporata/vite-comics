@@ -30,12 +30,10 @@
     @use '../style/partials/mixins' as *;
     
     article {
-            width: calc(100% / 6);
-            padding: 1rem;
-            margin-bottom: .5rem;
+        width: calc(100% / 6);
+    }
 
-            img{
-                width: 100%;
-            }
-        }
+    img {
+        width: 100%;
+    }
 </style>

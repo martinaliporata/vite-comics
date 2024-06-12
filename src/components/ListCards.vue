@@ -90,9 +90,9 @@
         <h1>
             Current series
         </h1>
-        <div class="cards" v-for="(card, index) in cardList" :key="index">
+        <div class="cards">
             <!-- :singlecard è la props che deve ricevere -->
-            <SingleCard v-for="(card, index) in cardList" :key="index" :singleCard="card"/>
+            <SingleCard v-for="(card, index) in cardList" :key="index" :card="card"/>
         </div>
     </section>
 </template>
@@ -108,9 +108,8 @@
 
     div.cards {
         display: flex;
-        width: 100%;
-        margin: 0 auto;
         justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
     }
 </style>
