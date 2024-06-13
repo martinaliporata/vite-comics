@@ -87,11 +87,13 @@
 
 <template>
     <section class="cards-list">
-        <h1>
-            Current series
-        </h1>
+        <div class="title">
+            <h1>
+                Current series
+            </h1>
+        </div>
         <div class="cards">
-            <!-- :singlecard è la props che deve ricevere -->
+            <!-- :card è la props che deve ricevere -->
             <SingleCard v-for="(card, index) in cardList" :key="index" :card="card"/>
         </div>
     </section>
@@ -103,7 +105,11 @@
     
     h1 {
         font-size: 1rem;
-        color: white;
+        color: $color-white;
+    }
+
+    .title {
+        background-color: blue;
     }
 
     div.cards {
@@ -111,5 +117,9 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    img {
+        width: 100%;
     }
 </style>

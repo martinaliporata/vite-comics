@@ -146,11 +146,8 @@
 
 <template>
     <main>
-        <section class="main-div">
-            <h1>
-                <-- Contents goes here -->
-            </h1>
-        </section>
+        <img src="../assets/img/jumbotron.jpg" alt="">
+        <ListCards/>
         <section class="navbar-main">
             <section class="navbar-left">
                 <h2>
@@ -199,7 +196,6 @@
                 </nav>
             </section>
         </section>
-        <ListCards/>
     </main>
 </template>
 
@@ -217,16 +213,13 @@
 
     h2 {
         @include text-uppercase;
+        color: $color-white;
     }
 
     .main-div {
         height: 15vh;
         background-color: #1c1c1c;
         @include flex-row;
-    }
-
-    h1,h2 {
-        color: $color-white;
     }
 
     li {
@@ -242,6 +235,10 @@
     .navbar-middle,
     .navbar-right {
         padding-left: 1rem;
+    }
+
+    img {
+        width: 100%;
     }
 
 </style>

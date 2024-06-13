@@ -29,8 +29,9 @@
     @use '../style/partials/variables' as *;
     @use '../style/partials/mixins' as *;
     
-    article {
-        width: calc(100% / 6);
+    .cards-list {
+        width: 20%;
+        margin: 0 auto;
     }
 
     img {

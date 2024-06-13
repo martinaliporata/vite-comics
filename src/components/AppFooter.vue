@@ -9,23 +9,19 @@
                     },
                     {
                         name: 'Twitter',
-                        link: '#',
-                        active: false,
+                        image:'../assets/img/footer-twitter.jpg'
                     },
                     {
                         name: 'Youtube',
-                        link: '#',
-                        active: false,
+                        image:'../assets/img/footer-youtube.jpg'
                     },
                     {
                         name: 'Pinterest',
-                        link: '#',
-                        active: false,
+                        image:'../assets/img/footer-pinterest.jpg'
                     },
                     {
                         name: 'Periscope',
-                        link: '#',
-                        active: false,
+                        image:'../assets/img/footer-periscope.jpg'
                     },
                 ]
             }
@@ -44,8 +40,8 @@
             <h2>
                 follow us
             </h2>
-            <div>
-                <img src="../assets/img/footer-periscope.png" alt="">
+            <div v-for="element in navbarSocial" :key="index">
+                {{element.image}}
             </div>
         </section>
     </header>
